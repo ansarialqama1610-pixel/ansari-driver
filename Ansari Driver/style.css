@@ -1,0 +1,190 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #111;
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+}
+
+#game {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    background: #222;
+}
+
+/* Score */
+
+#hud {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    right: 15px;
+    z-index: 20;
+
+    display: flex;
+    justify-content: space-between;
+
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* Road */
+
+#road {
+    position: absolute;
+
+    width: 420px;
+    height: 100%;
+
+    left: 50%;
+    transform: translateX(-50%);
+
+    background:
+        repeating-linear-gradient(
+            to bottom,
+            #333 0px,
+            #333 80px,
+            #555 80px,
+            #555 120px
+        );
+
+    border-left: 8px solid white;
+    border-right: 8px solid white;
+}
+
+/* Player */
+
+#player {
+    position: absolute;
+
+    bottom: 100px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    font-size: 60px;
+
+    z-index: 10;
+}
+
+/* Obstacles */
+
+.obstacle {
+    position: absolute;
+
+    font-size: 55px;
+
+    top: -100px;
+
+    z-index: 5;
+}
+
+.obstacle1 {
+    left: 50px;
+}
+
+.obstacle2 {
+    left: 175px;
+}
+
+.obstacle3 {
+    left: 290px;
+}
+
+/* Start screen */
+
+#startScreen,
+#gameOverScreen {
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0, 0, 0, 0.85);
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    color: white;
+
+    z-index: 30;
+
+    text-align: center;
+}
+
+#gameOverScreen {
+    display: none;
+}
+
+h1 {
+    font-size: 45px;
+    margin-bottom: 15px;
+}
+
+p {
+    font-size: 20px;
+    margin-bottom: 25px;
+}
+
+/* Buttons */
+
+button {
+
+    border: none;
+
+    padding: 15px 30px;
+
+    border-radius: 10px;
+
+    font-size: 20px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+/* Mobile controls */
+
+#controls {
+
+    position: absolute;
+
+    bottom: 25px;
+
+    left: 0;
+    right: 0;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    padding: 0 30px;
+
+    z-index: 25;
+}
+
+#controls button {
+
+    width: 80px;
+    height: 60px;
+
+    font-size: 30px;
+
+    background: white;
+
+    opacity: 0.8;
+}
